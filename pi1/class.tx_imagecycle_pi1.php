@@ -646,7 +646,7 @@ class tx_imagecycle_pi1 extends AbstractPlugin
 
 		// checks if t3jquery is loaded
 		if (defined('T3JQUERY') && T3JQUERY === true) {
-			tx_t3jquery::addJqJS();
+			\T3Ext\T3jquery\Utility\T3jqueryUtility::addJqJS();
 		} else {
 			$this->pagerenderer->addJsFile($this->conf['jQueryLibrary'], true);
 			$this->pagerenderer->addJsFile($this->conf['jQueryEasing']);
