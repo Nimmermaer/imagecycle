@@ -88,7 +88,7 @@ class tx_imagecycle_pagerenderer
 						'tofooter' => ($this->conf['jsInFooter'] || $allJsInFooter),
 						'jsminify' => $this->conf['jsMinify'],
 					);
-					tx_t3jquery::addJS('', $conf);
+					\T3Ext\T3jquery\Utility\T3jqueryUtility::addJS('', $conf);
 				} else {
 					$file = $this->getPath($jsToLoad);
 					if ($file) {
@@ -114,7 +114,7 @@ class tx_imagecycle_pagerenderer
 				$conf['tofooter'] = ($this->conf['jsInFooter'] || $allJsInFooter);
 				$conf['jsminify'] = $this->conf['jsMinify'];
 				$conf['jsinline'] = $this->conf['jsInline'];
-				tx_t3jquery::addJS('', $conf);
+				\T3Ext\T3jquery\Utility\T3jqueryUtility::addJS('', $conf);
 			} else {
 				// Add script only once
 				$hash = md5($temp_js);
